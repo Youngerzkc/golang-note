@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+service Greeter {
+	rpc Hello(HelloRequest) returns (HelloResponse) {}
+	rpc Post(PostRequest) returns (PostResponse) {}
+}
+
+message PostRequest {
+	//bytes reward_rule = 1;
+	oneof test_oneof {
+		string test1 = 1;
+		string test2 = 2;
+	}
+	string hello = 3;
+}
+
+message HelloRequest {
+	string name = 1;
+}
+
+message HelloResponse {
+	string greeting = 2;
+}
+
+message PostResponse {
+	string result = 1;
+	bytes reward_rule = 2;
+}
