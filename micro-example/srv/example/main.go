@@ -28,7 +28,7 @@ func (s *Say) Post(ctx context.Context, req *greeterProto.PostRequest, rsp *gree
 
 func main() {
 	service := micro.NewService(
-		micro.Name("com.workai.aicloud.srv.greeter"),
+		micro.Name("com.srv.greeter"),
 		micro.RegisterTTL(time.Second*30),
 		micro.RegisterInterval(time.Second*10),
 	)

@@ -50,10 +50,10 @@ func main() {
 	})
 
 	// setup Greeter Server Client
-	cl = greeterProto.NewGreeterClient("com.workai.aicloud.srv.greeter", client.DefaultClient)
+	cl = greeterProto.NewGreeterClient("com.srv.greeter", client.DefaultClient)
 
 	service := web.NewService(
-		web.Name("com.workai.aicloud.api.greeter"),
+		web.Name("com.api.greeter"),
 	)
 
 	service.Init()
